@@ -34,3 +34,15 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
+
+alias mci='mvn clean install -Dmaven.test.skip'
+alias maa='mvn assembly:assembly -Dmaven.test.skip'
+
+alias get_pass='echo -e "import string\nfrom random import choice\nprint str().join([choice(string.letters + string.digits) for i in range(30)])" | python'
+
+disable_ssh_agent_here() {
+  export SSH_AGENT_PID=""
+  export SSH_AUTH_SOCK=""
+}
+
+
