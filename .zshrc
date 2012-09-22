@@ -46,3 +46,7 @@ disable_ssh_agent_here() {
 }
 
 
+autoload bashcompinit
+bashcompinit
+bindkey '^X/' _bash_complete-word
+
