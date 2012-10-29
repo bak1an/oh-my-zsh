@@ -31,6 +31,8 @@ ZSH_THEME="gentoo_new"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git python django)
 
+export PATH=$PATH:~/bin/
+
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
