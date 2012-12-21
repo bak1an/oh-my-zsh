@@ -1,0 +1,2 @@
+export SCALA_HOME="/home/bak1an/bin/scala"
+export PATH=$PATH:$SCALA_HOME/bin

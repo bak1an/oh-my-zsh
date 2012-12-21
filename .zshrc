@@ -52,3 +52,8 @@ autoload bashcompinit
 bashcompinit
 bindkey '^X/' _bash_complete-word
 
+if [ -f "$HOME/.oh-my-zsh/locals.zsh" ]
+    then
+      source "$HOME/.oh-my-zsh/locals.zsh"
+fi
+
