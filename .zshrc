@@ -57,3 +57,5 @@ if [ -f "$HOME/.oh-my-zsh/locals.zsh" ]
       source "$HOME/.oh-my-zsh/locals.zsh"
 fi
 
+bindkey -v
+
