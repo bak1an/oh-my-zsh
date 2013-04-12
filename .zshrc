@@ -59,12 +59,6 @@ fi
 
 bindkey -v
 
-if [ -e /usr/share/terminfo/x/xterm-256color ]; then
-    export TERM='xterm-256color'
-else
-    export TERM='xterm-color'
-fi
-
 function zle-line-init zle-keymap-select {
     RPS1="${${KEYMAP/vicmd/-N-}/(main|viins)/-I-}"
     RPS2=$RPS1
