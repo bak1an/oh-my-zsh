@@ -67,3 +67,5 @@ function zle-line-init zle-keymap-select {
 zle -N zle-line-init
 zle -N zle-keymap-select
 
+bindkey '^[[A' up-line-or-search
+bindkey '^[[B' down-line-or-search
