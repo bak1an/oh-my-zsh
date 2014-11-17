@@ -59,8 +59,10 @@ fi
 
 bindkey -v
 
+return_code="%(?..%{$fg[red]%}%? %{$reset_color%})"
+
 function zle-line-init zle-keymap-select {
-    RPS1="${${KEYMAP/vicmd/-N-}/(main|viins)/-I-}"
+    RPS1="${return_code}${${KEYMAP/vicmd/-N-}/(main|viins)/-I-}"
     RPS2=$RPS1
     zle reset-prompt
 }
