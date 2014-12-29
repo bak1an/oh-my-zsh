@@ -42,6 +42,8 @@ alias maa='mvn assembly:assembly -Dmaven.test.skip'
 
 alias get_pass='echo -e "import string\nfrom random import choice\nprint str().join([choice(string.letters + string.digits) for i in range(30)])" | python'
 
+alias ctaghere="ack -f | grep -vE \"/(bower_components|\.tmp|dist)/\" | ctags -L - --python-kinds=-i"
+
 disable_ssh_agent_here() {
   export SSH_AGENT_PID=""
   export SSH_AUTH_SOCK=""
