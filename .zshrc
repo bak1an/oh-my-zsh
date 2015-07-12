@@ -74,4 +74,6 @@ zle -N zle-keymap-select
 bindkey '^[[A' up-line-or-search
 bindkey '^[[B' down-line-or-search
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+PERL_MB_OPT="--install_base \"/home/bak1an/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/bak1an/perl5"; export PERL_MM_OPT;
