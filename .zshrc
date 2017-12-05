@@ -40,7 +40,7 @@ source $ZSH/oh-my-zsh.sh
 alias mci='mvn clean install -Dmaven.test.skip'
 alias maa='mvn assembly:assembly -Dmaven.test.skip'
 
-alias get_pass='echo -e "import string\nfrom random import choice\nprint str().join([choice(string.letters + string.digits) for i in range(30)])" | python'
+alias get_pass='echo -e "import string\nfrom random import choice\nprint str().join([choice(string.letters + string.digits) for i in range(30)])" | python2'
 
 alias ctaghere="ack -f | grep -vE \"/(bower_components|\.tmp|dist)/\" | ctags -L - --python-kinds=-i"
 
@@ -77,3 +77,5 @@ bindkey '^[[B' down-line-or-search
 
 PERL_MB_OPT="--install_base \"/home/bak1an/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/bak1an/perl5"; export PERL_MM_OPT;
+
+eval "$(direnv hook zsh)"
