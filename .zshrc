@@ -78,4 +78,7 @@ bindkey '^[[B' down-line-or-search
 PERL_MB_OPT="--install_base \"/home/bak1an/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/home/bak1an/perl5"; export PERL_MM_OPT;
 
-eval "$(direnv hook zsh)"
+if [ $(which direnv) ]; then
+    eval "$(direnv hook zsh)"
+fi
+
