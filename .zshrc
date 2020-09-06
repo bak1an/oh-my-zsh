@@ -15,7 +15,7 @@ ZSH_THEME="gentoo_new"
 # CASE_SENSITIVE="true"
 
 # Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
@@ -40,7 +40,7 @@ source $ZSH/oh-my-zsh.sh
 alias mci='mvn clean install -Dmaven.test.skip'
 alias maa='mvn assembly:assembly -Dmaven.test.skip'
 
-alias get_pass='echo -e "import string\nfrom random import choice\nprint str().join([choice(string.letters + string.digits) for i in range(30)])" | python2'
+alias get_pass='echo -e "import string\nfrom random import choice\nprint(str().join([choice(string.ascii_letters + string.digits) for i in range(30)]))" | python3'
 
 alias ctaghere="ack -f | grep -vE \"/(bower_components|\.tmp|dist)/\" | ctags -L - --python-kinds=-i"
 
